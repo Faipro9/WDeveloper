@@ -1,0 +1,71 @@
+body{
+    padding: 25px;
+    background-color: #191926;
+    font-family: Arial;
+  }
+  span{
+    font-size: 40px;
+    padding-bottom: 5px;
+    color: #ffffff;
+    position: absolute;
+    top: 2%;
+    left: 10%;
+  }
+  img{
+    border-radius: 8px;
+    position: absolute;
+    top: 1%;
+  }
+  .login {
+      border: 2px solid;
+      padding: 30px;
+      padding-bottom: 100px;
+      width: 20%;
+      border-color: #ffffff;
+      border-radius: 25px;
+      position: relative;
+      left: 35%;
+  }
+  .in{
+    border-radius: 10px;
+    padding: 6px;
+    font-size: 20px;
+    border-color: #ffffff;
+  }
+  .but{
+    border: 2px solid;
+    font-size: 30px;
+    padding: 4px;
+    border-radius: 8px;
+    padding-right: 60px;
+    padding-left: 60px;
+    background-color: #00ff00;
+    position: relative;
+    left: 12%;
+    top: 50%;
+  }
+  .but:active{
+    border: 2px solid;
+    font-size: 30px;
+    padding: 4px;
+    border-radius: 8px;
+    padding-right: 60px;
+    padding-left: 60px;
+    background-color: #00ffee;
+    position: relative;
+    left: 12%;
+  }
+/*///////////////////////////////////////////////////////////////////*/
+
+  
+  
+  /*//////////////////////////////////////////////////////////////////////////////////////////////*/
+  
+  
+  
+  
+  
+  
+  
+  
+  

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, World!</title>
+    <style>
+      
+body {
+    background-color: #111122;
+    font-family: Arial;
+}
+#code-ht{
+    width: 98%;
+    height: 200px;
+    background-color: #000011;
+    color: #00ff00;
+    border-radius: 10px;
+    font-size: 17px;
+}
+#code-cs{
+    width: 98%;
+    height: 200px;
+    background-color: #000011;
+    color: #0000ff;
+    border-radius: 10px;
+}
+/*#er{
+  color: #ff0000;
+}*/
+#code-js{
+    width: 98%;
+    height: 200px;
+    background-color: #000011;
+    color: #ffff00;
+    border-radius: 10px;
+}
+#run{
+    background-color: #00ff00;
+    border: 0;
+    border-radius: 50px;
+    padding: 10px;
+    width: 70px;
+    font-size: 20px;
+}
+#out{
+    border-color: #00ff00;
+    background-color: auto;
+    width: 100%;
+    height: 600px;
+    border: 1 solid;
+    border-radius: 10px;
+}
+#oute{
+    border-color: #ff0000;
+    background-color: auto;
+    width: 100%;
+    height: 600px;
+    border: 1 solid;
+    border-radius: 10px;
+}
+.er{
+  color: #00ff00;
+}
+.er2{
+  color: #ff0000;
+}
+#cls{
+  background-color: #ff0000;
+  border: 0;
+  border-radius: 50px;
+  padding: 10px;
+  width: 180px;
+  font-size: 20px;
+}
+      
+    </style>
+  </head>
+  <body text="white">
+        <button onclick="run()" id="run">RUN</button>
+        <button onclick="cl()" id="cls">CLEAR OUTPUT</button>
+        <br><br><br>
+        <h3>[ html ]</h3>
+        <code><textarea id="code-ht">
+          
+<!DOCTYPE html>
+<html>
+  <body>
+      <h1>Hello World</h1>
+      <p>page1</p>
+  </body>
+</html>
+          
+        </textarea></code>
+        <br>
+        <h3>[ css ]</h3>
+        <code><textarea id="code-cs">
+          
+          body{
+            background-color: #00ffff;
+            font-family: Arial;
+          }
+          h1{
+            color: #ff00ff;
+          }
+          
+        </textarea></code>
+        <br>
+        <h3>[ js ]</h3>
+        <code><textarea id="code-js">
+          
+          
+          
+        </textarea></code>
+        <br><br>
+            
+        <br><br>
+        <div id="er">
+          <h3 class="er">ERRORS</h3>
+        </div>
+        <h3>Result:</h3>
+        <iframe id="out"></iframe>
+        
+      <script>
+        
+var er1 = document.getElementById('er').value;
+function run(){
+try{
+    var ht = document.getElementById("code-ht").value;
+    var cs = document.getElementById("code-cs").value;
+    var js = document.getElementById("code-js").value;
+    var out = document.getElementById("out");
+    var er = document.getElementById("er");
+    
+out.contentDocument.body.innerHTML = ht + "<style>" + cs + "</style>";
+out.contentWindow.eval(js);
+}
+catch(error){
+    console.log(error);
+    er.innerHTML = "<h3 class='er2'>" + error + "</h3>"
+}
+    
+}
+
+function cl(){
+  out.innerHTML = "";
+  er.innerHTML = "<h3 class='er'>ERRORS</h3>";
+}
+        
+      </script>
+  </body>
+</html>
